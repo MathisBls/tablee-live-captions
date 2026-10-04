@@ -1,0 +1,17 @@
+node_modules/
+dist/
+coverage/
+*.tsbuildinfo
+.vite/
+.env
+.env.local
+*.log
+
+# Binaires et modèles locaux (whisper.cpp, ggml) : jamais versionnés
+tools/
+
+.DS_Store
+Thumbs.db
+
+# Configuration locale de l'agent de code
+.claude/
