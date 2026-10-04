@@ -49,7 +49,7 @@ Before the meal, a short setup screen asks for [[À REMPLIR : prénom]]'s name a
 
 ## Code
 
-{% embed [[À REMPLIR : URL du repo GitHub public, ex. https://github.com/<user>/tablee]] %}
+{% embed https://github.com/MathisBls/tablee-live-captions %}
 
 Everything is MIT licensed and written in strict TypeScript: a Fastify server, a React app for the tablet, and a small shared package that holds the contract between the two.
 

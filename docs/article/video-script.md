@@ -29,7 +29,7 @@ Durée cible : **85 s**. Format 16:9, 1080p. Upload YouTube **non répertorié**
 | 3 | 25 à 40 s | Plan serré sur un convive, puis sur l'écran, puis sur la personne. | Le convive dit le prénom. Quelques secondes plus tard, le sous-titre arrive et la lueur pulse autour de l'écran. On filme la réaction réelle de la personne. | `Someone says [[À REMPLIR : prénom]]. The screen lights up.` | La phrase du convive audible, sous-titrée en anglais. |
 | 4 | 40 à 60 s | Gros plan : le doigt de la personne appuie sur le bouton « What did I miss? » (ou « Qu'est-ce que j'ai raté ? » si la session est en français). | Le panneau monte, le résumé de Gemma s'affiche. Gemma écrit les 3 phrases en moins d'une demi-seconde : **tenir le plan 5 s sur le résumé complet** pour qu'on ait le temps de le lire. | `"What did I miss?" Gemma sums up the last 3 minutes.` + traduction anglaise du résumé en sous-titre s'il est en français. | Son de la table, bas. |
 | 5 | 60 à 75 s | Écran noir. | Trois cartons successifs, environ 5 s chacun. | `Runs on one computer at home.` / `No internet. Nothing leaves the house.` / `Gemma + Whisper. Open weights.` | Silence ou musique douce. |
-| 6 | 75 à 85 s | Nom de l'appli sur fond sombre. | | `Tablée` puis `[[À REMPLIR : URL du repo GitHub]]` | Silence. |
+| 6 | 75 à 85 s | Nom de l'appli sur fond sombre. | | `Tablée` puis `github.com/MathisBls/tablee-live-captions` | Silence. |
 
 Notes sur les cartons :
 
