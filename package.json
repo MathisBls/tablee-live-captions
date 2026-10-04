@@ -9,6 +9,8 @@
     "node": ">=22"
   },
   "scripts": {
+    "setup:whisper": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/setup-whisper.ps1",
+    "whisper": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/start-whisper.ps1",
     "dev": "pnpm -r --parallel dev",
     "typecheck": "pnpm -r typecheck",
     "lint": "eslint . --max-warnings 0",
