@@ -13,7 +13,11 @@ declare abstract class AudioWorkletProcessor {
   ): boolean;
 }
 
+interface WorkletProcessorConstructionOptions {
+  readonly processorOptions?: unknown;
+}
+
 declare function registerProcessor(
   name: string,
-  processorConstructor: new () => AudioWorkletProcessor,
+  processorConstructor: new (options: WorkletProcessorConstructionOptions) => AudioWorkletProcessor,
 ): void;

@@ -3,6 +3,7 @@ import type { Observable } from 'rxjs';
 export type MicFailure = 'denied' | 'unavailable' | 'insecure';
 
 export type MicSignal =
+  | { readonly type: 'starting' }
   | { readonly type: 'listening' }
   /** Le navigateur attend un geste de l'utilisateur avant de laisser l'audio démarrer. */
   | { readonly type: 'suspended' }
@@ -23,6 +24,12 @@ export interface TableAudio {
   /** Niveau RMS de chaque trame de 100 ms, entre 0 et 1. */
   readonly level$: Observable<number>;
   readonly restart: () => void;
+}
+
+/** Paramètres transmis au worklet audio à sa création (`processorOptions`). */
+export interface PcmWorkletOptions {
+  readonly targetSampleRate: number;
+  readonly frameSamples: number;
 }
 
 /** Message posté par le worklet audio vers le thread principal. */
