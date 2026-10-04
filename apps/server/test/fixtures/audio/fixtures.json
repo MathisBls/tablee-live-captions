@@ -1,0 +1,53 @@
+{
+  "format": "WAV PCM16 little-endian, mono, 16 kHz, en-tête de 44 octets",
+  "source": "Dialogues synthétisés avec les voix Windows OneCore (Paul, Julie, Hortense, David, Zira, Mark), 0,7 s de silence entre deux répliques.",
+  "fixtures": [
+    {
+      "file": "fr-dinner-mention.wav",
+      "language": "fr",
+      "listenerName": "Mamie",
+      "guestNames": ["Paul", "Inès", "Léa"],
+      "durationSeconds": 22.4,
+      "transcript": "Bon, qui reprend du gratin ? Il en reste plein. Moi ! Il est délicieux, c'est la recette de Mamie ? Au fait, vous partez où cet été ? On hésite entre la Bretagne et l'Espagne. Mamie, tu viendrais avec nous en Bretagne ? Il y a une chambre au rez-de-chaussée.",
+      "expectedMentions": 2,
+      "expectedKeywords": ["gratin", "Bretagne", "Espagne", "Mamie"]
+    },
+    {
+      "file": "fr-dinner-topic-change.wav",
+      "language": "fr",
+      "listenerName": "Mamie",
+      "guestNames": ["Paul", "Inès", "Léa"],
+      "durationSeconds": 26.3,
+      "transcript": "Vous avez vu le match de samedi ? Lens a gagné trois à un. Oui, le deuxième but était magnifique, une frappe de trente mètres. Moi je n'ai rien vu, j'étais au travail. D'ailleurs, je change de poste en novembre. Ah bon ? Tu vas faire quoi ? Je deviens responsable de l'équipe de nuit à l'hôpital.",
+      "expectedMentions": 0,
+      "expectedKeywords": ["match", "Lens", "novembre", "hôpital"]
+    },
+    {
+      "file": "en-dinner-mention.wav",
+      "language": "en",
+      "listenerName": "Grandpa",
+      "guestNames": ["Lily"],
+      "durationSeconds": 20.9,
+      "transcript": "Can someone pass the potatoes? They smell amazing. Sure. Grandpa, do you want some more gravy? By the way, did anyone watch the game last night? No, we were at the school play. Lily was a tree, and she was the best tree.",
+      "expectedMentions": 1,
+      "expectedKeywords": ["potatoes", "Grandpa", "game", "Lily"]
+    },
+    {
+      "file": "room-tone-silence.wav",
+      "language": "fr",
+      "listenerName": "Mamie",
+      "guestNames": [],
+      "durationSeconds": 3.0,
+      "transcript": "",
+      "expectedMentions": 0,
+      "expectedKeywords": [],
+      "note": "Bruit rose très faible. Mesuré : whisper large-v3-turbo hallucine « Merci. » dessus. Le chunker doit l'écarter (RMS sous le seuil) et le filtre d'hallucinations doit rejeter « Merci. »."
+    }
+  ],
+  "measuredOn": {
+    "date": "2026-10-04",
+    "machine": "Ryzen 7 9800X3D, RTX 5070 Ti 16 Go, Windows 11",
+    "whisper": "whisper.cpp b5130 (CUDA 12.4), ggml-large-v3-turbo : ~130 ms par fenêtre de 4 s à chaud, 18 s au tout premier appel (compilation CUDA)",
+    "gemma": "gemma4:e4b via Ollama 0.35.1, num_ctx 8192 : premier token 74-230 ms à chaud, résumé de 3 phrases en 250-380 ms, ~270 tokens/s ; 52 s au premier chargement à froid"
+  }
+}
