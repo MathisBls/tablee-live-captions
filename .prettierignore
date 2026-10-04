@@ -1,0 +1,7 @@
+pnpm-lock.yaml
+dist
+coverage
+tools
+
+# Docs rédigées à la main : on ne les reformate pas
+*.md

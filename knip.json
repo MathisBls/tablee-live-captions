@@ -1,0 +1,17 @@
+{
+  "$schema": "https://unpkg.com/knip@6/schema.json",
+  "workspaces": {
+    ".": {},
+    "packages/shared": {
+      "project": ["src/**/*.ts"]
+    },
+    "apps/server": {
+      "project": ["src/**/*.ts"],
+      "ignoreDependencies": ["pino-pretty"]
+    },
+    "apps/web": {
+      "entry": ["src/services/audio/pcm-worklet.ts"],
+      "project": ["src/**/*.{ts,tsx,css}"]
+    }
+  }
+}
