@@ -17,3 +17,22 @@ export interface SessionContextValue {
   readonly leaveTable: () => void;
   readonly endSession: (notice: SessionNotice) => void;
 }
+
+/** Une liste de prénoms en cours de saisie : ceux validés et ce qui est tapé dans le champ. */
+export interface NameListState {
+  readonly names: readonly string[];
+  readonly draft: string;
+}
+
+export interface OnboardingForm {
+  readonly listenerName: string;
+  readonly nicknames: NameListState;
+  readonly guests: NameListState;
+  readonly listenerError: string | null;
+  readonly submitError: string | null;
+  readonly submitting: boolean;
+  readonly setListenerName: (value: string) => void;
+  readonly setNicknames: (state: NameListState) => void;
+  readonly setGuests: (state: NameListState) => void;
+  readonly submit: () => Promise<void>;
+}
