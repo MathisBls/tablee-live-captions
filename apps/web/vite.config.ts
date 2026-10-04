@@ -13,6 +13,8 @@ export default defineConfig({
   resolve: {
     alias: { '@': fileURLToPath(new URL('./src', import.meta.url)) },
   },
+  // Le worklet audio est chargé par audioWorklet.addModule, qui attend un module ES.
+  worker: { format: 'es' },
   server: {
     proxy: {
       '/api': backendUrl,
@@ -23,5 +25,6 @@ export default defineConfig({
   },
   test: {
     environment: 'jsdom',
+    setupFiles: ['./src/test/setup.ts'],
   },
 });
