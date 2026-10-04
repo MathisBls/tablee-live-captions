@@ -37,3 +37,10 @@ export interface PcmFrameMessage {
   readonly frame: ArrayBuffer;
   readonly level: number;
 }
+
+/** Ce que la page de table consomme : l'état (rendu à chaque changement) et le niveau (flux à part). */
+export interface TableAudioState {
+  readonly status: AudioStatus;
+  readonly level$: Observable<number>;
+  readonly restart: () => void;
+}
