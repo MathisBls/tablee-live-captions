@@ -5,7 +5,9 @@ import react from '@vitejs/plugin-react';
 import { defineConfig } from 'vitest/config';
 
 const backendUrl = 'http://127.0.0.1:3001';
-// HTTPS local : getUserMedia exige un contexte sécurisé dès qu'on sort de localhost (démo tablette en LAN).
+// Démo sur tablette ou téléphone : getUserMedia exige un contexte sécurisé dès qu'on sort de
+// localhost. TABLEE_HTTPS=1 sert donc le front en HTTPS sur le réseau local ; le back reste sur
+// 127.0.0.1, joint uniquement à travers le proxy ci-dessous.
 const useHttps = process.env['TABLEE_HTTPS'] === '1';
 
 export default defineConfig({
@@ -16,6 +18,7 @@ export default defineConfig({
   // Le worklet audio est chargé par audioWorklet.addModule, qui attend un module ES.
   worker: { format: 'es' },
   server: {
+    host: useHttps,
     proxy: {
       '/api': backendUrl,
       '/health': backendUrl,
