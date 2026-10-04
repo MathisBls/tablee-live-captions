@@ -129,3 +129,25 @@
     animation: var(--animate-flicker);
   }
 }
+
+/* Fraunces poussée vers le doux : le caractère « menu de bistrot ». */
+@utility font-soft {
+  font-variation-settings:
+    'SOFT' 100,
+    'WONK' 0;
+}
+
+@utility font-wonk {
+  font-variation-settings:
+    'SOFT' 100,
+    'WONK' 1;
+}
+
+/* Petites capitales espacées des étiquettes (« ON PARLE DE »). */
+@utility eyebrow {
+  font-family: var(--font-sans);
+  font-size: 0.9375rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
